@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
+    <!-- Carregando o p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- Carregando o arquivo JavaScript do jogo -->
+    <script src="index.js" defer></script>
+    <!-- Carregando o CSS do jogo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Áudio para o som de comer -->
+    <audio id="eatSound">
+        <source src="eat.mp3" type="audio/wav">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <!-- Áudio para a música de fundo -->
+    <audio id="gameMusic" loop>
+        <source src="game_music.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+    <!-- Contêiner do jogo -->
+    <section class="gameContainer">
+        <div id="score-container">
+            <div id="score">0</div>
+            <div id="goal">Objetivo: 5 pontos</div>
+        </div>
+        <div id="telaJogo"></div>
+        <div class="button-container">
+            <button id="resetBtn">Reset</button>
+            <button id="back">Voltar</button>
+        </div>
+    </section>
+
+    <!-- Tela de Game Over -->
+    <section class="gameOver">
+        <h1>GAME OVER!</h1>
+        <button id="backToStartGameOver">Voltar para Início</button>
+    </section>
+
+    <!-- Tela de Vitória -->
+    <section class="win"> 
+        <h1>GANHOU!</h1>
+        <button id="backToStartWin">Voltar para Início</button>
+    </section>
+
+    <!-- Tela de Dificuldade -->
+    <section class="dificuldade">
+        <h1>ESCOLHA A DIFICULDADE</h1>
+        <div>
+            <input type="button" id="facil" value="Fácil">
+            <input type="button" id="normal" value="Normal">
+            <input type="button" id="dificil" value="Difícil">
+        </div>
+    </section>
+
+    <!-- Tela de Fases -->
+    <section class="fases">
+        <h1>ESCOLHA A FASE</h1>
+        <div class="fases-container">
+            <div>
+                <img src="">
+                <p>Valley of Bricks</p> 
+            </div>
+            <div>
+                <img src="">
+                <p>...</p> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Tela de Início -->
+    <section class="telaInicio">
+        <div class="inicio">
+            <img src="cobra.png">
+            <h1>Jogo da Cobrinha</h1>
+        </div>
+        <div class="credits-container">
+            <div class="eu">
+                <img src="eu.png">
+                <h1>Aluno</h1> 
+                <p>Elvis Aaron Moura de Araújo</p>
+            </div>
+            <div class="professor">
+                <img src="rummenigge.png"> 
+                <h1>Educador</h1> 
+                <p>Rummenigge Rudson Dantas</p>
+            </div>
+        </div>
+        <div class="opcoes-container">
+            <div>
+                <h1>Resumo</h1>
+                <p>O jogo da cobrinha, também conhecido como Snake...</p>
+            </div>
+            <div>
+                <h1>Controles</h1>
+                <p>Seta para cima: Move a cobra para cima...</p>
+            </div>
+            <div>
+                <h1>Objetivo</h1>
+                <p>O objetivo do jogo é guiar a cobra para que ela coma as frutas...</p>
+            </div>
+            <div>
+                <h1>Dicas</h1>
+                <p>Planejamento: Antecipe seus movimentos e planeje a rota...</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="#" id="iniciar">Iniciar</a>
+            <a href="#" id="creditos">Créditos</a>
+            <a href="#" id="opcoes">Opções</a>
+            <a href="#" id="voltar">Voltar</a>
+        </div>
+    </section>
+</body>
+</html>
